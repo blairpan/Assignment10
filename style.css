@@ -1,0 +1,119 @@
+h2{
+  text-align: center;
+}
+body {
+  background-image: url("images/background.jpg");
+	background-repeat:repeat;
+  background-color: #cccccc;
+}
+
+.slideshow-container {
+	max-width: 1000px;
+  	position: relative;
+  	margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+	width: 300px;
+  height: 300px;
+  margin: 10px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.dots {
+	text-align: center;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(211,211,211,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+/*trying to make them fade at different time, didn't work :( */
+.fade img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.fade img:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.fade img:nth-child(3) {
+  animation-delay: 3s;
+}
+
+.fade img:nth-child(4) {
+  animation-delay: 4s;
+}
+.fade img:nth-child(5) {
+  animation-delay: 5s;
+}
+
+
+@keyframes fade {
+  from{opacity: .4} 
+  to {opacity: 1}
+}
+
+.swing{
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    animation-play-state: paused;
+}
+
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
